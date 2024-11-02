@@ -3,7 +3,7 @@ FleetEase
 ## Description
 FleetManagement associated app. 
 Meet FleetEase!
-Very very phase.
+Very very early phase.
 
 ## Resources
 
