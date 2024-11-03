@@ -1,6 +1,0 @@
-5
-1234 S 45328 Tesla
-1235 Octavia 345328 Skoda
-1236 Logan 843210 Dacia
-1237 Elysee 170234 Citroen
-1238 Golf 122333 VW
