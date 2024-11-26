@@ -16,9 +16,9 @@
 ---
 
 ##  How to Use
-
-1. **Clone the repository**:
    
-   1. First of all download QT Framework (preferably 14.0.2)
-   2. Open the terminal and copy type this: `git clone https://github.com/dbogdanm/QT-OOP`
-   3. Run the app!
+**1. First of all download QT Framework (preferably 14.0.2)**
+
+**2. Open the terminal and copy type this: `git clone https://github.com/dbogdanm/QT-OOP`**
+
+**3. Run the app!**
