@@ -22,3 +22,5 @@
 **2. Open the terminal and copy type this: `git clone https://github.com/dbogdanm/QT-OOP`**
 
 **3. Run the app!**
+
+The app's UI (for the moment) looks like [this](https://cdn.discordapp.com/attachments/1183809178058379385/1310992051910873208/image.png?ex=67473bfe&is=6745ea7e&hm=35c89dba20b84c3b7796b6e444f5b25bc4ea2ee609ee5304b088dd09f9f3950b&).
