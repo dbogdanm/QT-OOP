@@ -9,11 +9,14 @@ REMEMBER: **THIS EXACT COMMIT IS BASED ON [V0.2](https://github.com/dbogdanm/Fle
 ##  Key Features
 
 
-- **Vehicle Management**: Add, update, and track vehicle information with ease.
-- **Driver and Route Management**: Manage both of them in the same menu with ease.
-- **Trip Logs**: NOT IMPLEMENTED YET
-- **Reports**: NOT IMPLEMENTED YET
-- **Customer Complaints**: NOT IMPLEMENTED YET
+- [x] **Vehicle Management**: Add, update, and track vehicle information with ease.
+- [x] **Driver and Route Management**: Manage both of them in the same menu with ease.
+- [x]  **Trip Logs**: IMPLEMENTED
+- [x]  **Reports**: IMPLEMENTED
+- [x] **Customer Complaints**: IMPLEMENTED
+- [X] **Fuel Consumption Tracking**: IMPLEMENTED
+
+ PW and user for login: `1234` for user `admin`. To login again in to the management account use: `admin` and `admin`.
 
 ---
 
@@ -25,4 +28,5 @@ REMEMBER: **THIS EXACT COMMIT IS BASED ON [V0.2](https://github.com/dbogdanm/Fle
 
 **3. Run the app!**
 
-The app's UI (for the moment) looks like [this](https://cdn.discordapp.com/attachments/1183809178058379385/1310992051910873208/image.png?ex=67473bfe&is=6745ea7e&hm=35c89dba20b84c3b7796b6e444f5b25bc4ea2ee609ee5304b088dd09f9f3950b&).
+The app's UI (for the moment) looks like [this](https://cdn.discordapp.com/attachments/757656608137412719/1314370008079667210/image.png?ex=675385f5&is=67523475&hm=47057bbd569a60d1d67f125406feb444c854631c668b1447f306722684900055&).
+# Future UI and QoL updates are coming soon.
