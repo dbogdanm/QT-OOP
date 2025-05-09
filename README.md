@@ -29,4 +29,4 @@ REMEMBER: **THIS EXACT COMMIT IS BASED ON [V0.2](https://github.com/dbogdanm/Fle
 **3. Run the app!**
 
 The app's UI (for the moment) looks like [this](https://cdn.discordapp.com/attachments/757656608137412719/1314370008079667210/image.png?ex=675385f5&is=67523475&hm=47057bbd569a60d1d67f125406feb444c854631c668b1447f306722684900055&).
-# Future UI and QoL updates are coming soon.
+
