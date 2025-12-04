@@ -1,34 +1,71 @@
-#include <QApplication>
-#include <QSplashScreen>
-#include <QTimer>
-#include "mainwindow.h"
-#include "Models/loginwindow.h"
+#include <iostream>
+#include <vector>
+#include "Truck.h"
+#include "Motorcycle.h"
+#include "Route.h"
 
-int main(int argc, char *argv[])
-{
-    QApplication a(argc, argv);
+using namespace std;
 
-    // Splash screen
-    QSplashScreen *splash = new QSplashScreen;
-    splash->setPixmap(QPixmap(":/images/splash.png")); // imagine sau simplu text
-    splash->show();
-    a.processEvents();
+void displayMenu() {
+    cout << "1. Add Truck" << endl;
+    cout << "2. Add Motorcycle" << endl;
+    cout << "3. Add Route" << endl;
+    cout << "4. Display Vehicles" << endl;
+    cout << "5. Display Routes" << endl;
+    cout << "6. Exit" << endl;
+}
 
-    // După 2-3 secunde, închidem splash screen-ul și afișăm fereastra de login
-    QTimer::singleShot(2500, splash, &QWidget::close);
+int main() {
+    vector<Vehicle*> vehicles;
+    vector<Route> routes;
+    int choice;
 
-    LoginWindow loginWindow;
-    QObject::connect(&loginWindow, &LoginWindow::loginSuccessful, [&](){
-        // După login cu succes, afișăm fereastra principală
-        MainWindow *w = new MainWindow(loginWindow.getUsername());
-        w->show();
-        loginWindow.close();
-    });
+    do {
+        displayMenu();
+        cout << "Enter choice: ";
+        cin >> choice;
 
-    // Așteptăm încheierea splash screen-ului înainte de a afișa fereastra de login
-    QTimer::singleShot(2500, [&](){
-        loginWindow.show();
-    });
+        if (choice == 1) {
+            string make, model;
+            int year, axles;
+            double price;
+            cout << "Enter Make: "; cin >> make;
+            cout << "Enter Model: "; cin >> model;
+            cout << "Enter Year: "; cin >> year;
+            cout << "Enter Price: "; cin >> price;
+            cout << "Enter Axles: "; cin >> axles;
+            vehicles.push_back(new Truck(make, model, year, price, axles));
+        } else if (choice == 2) {
+            string make, model;
+            int year, engine;
+            double price;
+            cout << "Enter Make: "; cin >> make;
+            cout << "Enter Model: "; cin >> model;
+            cout << "Enter Year: "; cin >> year;
+            cout << "Enter Price: "; cin >> price;
+            cout << "Enter Engine Capacity: "; cin >> engine;
+            vehicles.push_back(new Motorcycle(make, model, year, price, engine));
+        } else if (choice == 3) {
+            string src, dest;
+            double dist;
+            cout << "Enter Source: "; cin >> src;
+            cout << "Enter Destination: "; cin >> dest;
+            cout << "Enter Distance: "; cin >> dist;
+            routes.emplace_back(src, dest, dist);
+        } else if (choice == 4) {
+            for (Vehicle* v : vehicles) {
+                v->displayInfo();
+            }
+        } else if (choice == 5) {
+            for (Route& r : routes) {
+                r.displayRoute();
+            }
+        }
+    } while (choice != 6);
 
-    return a.exec();
+    for (Vehicle* v : vehicles) {
+        delete v;
+    }
+
+    return 0;
 }
