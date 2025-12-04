@@ -2,62 +2,32 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QStackedWidget>
-#include <QMdiArea>
-#include <QWidget>
-#include <QString>
-#include "Models/FleetManager.h"
-#include "Exceptions/DriverNotFoundException.h"
-#include "Exceptions/FleetException.h"
-#include "Exceptions/RouteNotFoundException.h"
-#include "Exceptions/VehicleNotFoundException.h"
+#include <vector>
+#include "Vehicle.h"
+#include "Route.h"
 
-// Forward declarations if needed
-class FleetManager;
+QT_BEGIN_NAMESPACE
+namespace Ui { class MainWindow; }
+QT_END_NAMESPACE
 
-class MainWindow : public QMainWindow
-{
+class MainWindow : public QMainWindow {
     Q_OBJECT
+
 public:
-    explicit MainWindow(const QString &username, QWidget *parent = nullptr);
+    MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-private:
-    // Functions declared here must match definitions in .cpp
-    void createMenus();
-    void createToolBar();
-    void createPages();
-
-    void showDashboard();
-    void showFleetWindow();
-    void showManageWindow();
-    void showTripLogsWindow();
-    void showReportsWindow();
-    void showCustomerComplaintsWindow();
-    void showAccountWindow();
-    void showFuelConsumptionWindow();
-    void showRemindersWindow();
-    void showInspectionWindow();
-
-    // Widget creation helper methods
-    QWidget* createFleetWidget();
-    QWidget* createManageWidget();
-    QWidget* createTripLogsWidget();
-    QWidget* createReportsWidget();
-    QWidget* createCustomerComplaintsWidget();
-    QWidget* createAccountWidget();
-    QWidget* createFuelConsumptionWidget();
-    QWidget* createRemindersWidget();
-    QWidget* createInspectionWidget();
+private slots:
+    void on_addVehicleButton_clicked();
+    void on_addRouteButton_clicked();
+    void on_calculateTollButton_clicked();
 
 private:
-    QString m_username;          // Must be declared if used in constructor
-    QStackedWidget *stackedWidget;
-    QWidget *dashboardPage;
-    QWidget *mdiPage;
-    QMdiArea *mdiArea;
-
-    FleetManager fleetManager;
+    Ui::MainWindow *ui;
+    std::vector<Vehicle*> vehicles;
+    std::vector<Route> routes;
+    void updateVehicleList();
+    void updateRouteList();
 };
 
-#endif // MAINWINDOW_H
+#endif
