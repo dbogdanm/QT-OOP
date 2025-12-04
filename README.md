@@ -1,4 +1,4 @@
-# FleetEase App 🚗📊
+# FleetEase App 
 
 **FleetEase** is a comprehensive fleet management solution designed to simplify the administration of vehicles, drivers, and routes. With an intuitive interface and essential features, the app provides all the tools needed to keep a fleet organized and efficient.
 
