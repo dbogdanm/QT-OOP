@@ -1,34 +1,24 @@
 #ifndef LOGINWINDOW_H
 #define LOGINWINDOW_H
 
-#include <QWidget>
-#include <QLineEdit>
-#include <QPushButton>
-#include <QLabel>
+#include <QDialog>
 
-class LoginWindow : public QWidget
-{
+namespace Ui {
+class LoginWindow;
+}
+
+class LoginWindow : public QDialog {
     Q_OBJECT
+
 public:
     explicit LoginWindow(QWidget *parent = nullptr);
-
-    QString getUsername() const { return usernameEdit->text(); }
-
-signals:
-    void loginSuccessful();
+    ~LoginWindow();
 
 private slots:
-    void attemptLogin();
+    void on_loginButton_clicked();
 
 private:
-    QLineEdit *usernameEdit;
-    QLineEdit *passwordEdit;
-    QPushButton *loginButton;
-    QLabel *statusLabel;
-
-    // Puteți modifica aceste date după preferințe sau le puteți lua dintr-o bază de date.
-    QString validUsername = "admin";
-    QString validPassword = "1234";
+    Ui::LoginWindow *ui;
 };
 
-#endif // LOGINWINDOW_H
+#endif
