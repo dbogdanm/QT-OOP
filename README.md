@@ -1,6 +1,23 @@
 # FleetEase App 
 
+
 **FleetEase** is a comprehensive fleet management solution designed to simplify the administration of vehicles, drivers, and routes. With an intuitive interface and essential features, the app provides all the tools needed to keep a fleet organized and efficient.
+
+<div align="center">
+
+![Status](https://img.shields.io/badge/Maintained%3F-no-red.svg?style=flat-square)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+![Repo Size](https://img.shields.io/github/repo-size/dbogdanm/FleetManagement?style=flat-square)
+![Last Commit](https://img.shields.io/github/last-commit/dbogdanm/FleetManagement?style=flat-square)
+
+<br/>
+
+![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+![Qt](https://img.shields.io/badge/Qt-%23217346.svg?style=for-the-badge&logo=Qt&logoColor=white)
+![GUI](https://img.shields.io/badge/GUI-Application-blue?style=for-the-badge)
+![OOP](https://img.shields.io/badge/Pattern-OOP-purple?style=for-the-badge)
+
+</div>
 
 REMEMBER: **THIS EXACT COMMIT IS BASED ON [V0.2](https://github.com/dbogdanm/FleetManagement), SO COUNT THIS COMMIT AS FLEETEASE V0.2!**
 
